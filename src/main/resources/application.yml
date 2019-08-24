@@ -17,7 +17,10 @@ logging:
         boot:
           actuate: TRACE
 
-
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
 
 default:
   hello:
