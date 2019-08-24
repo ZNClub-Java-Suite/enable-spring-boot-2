@@ -1,0 +1,32 @@
+# APPLICATION LEVEL
+
+## DEFAULT CONFIG
+spring:
+  application:
+    name: demo-for-spring2
+server:
+  port: 8999
+
+## LOGGING
+logging:
+  level:
+#    root: INFO
+    org:
+      springframework:
+        web: TRACE
+        boot:
+          actuate: TRACE
+
+
+
+default:
+  hello:
+    name: God
+
+
+# ACTUATOR
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
