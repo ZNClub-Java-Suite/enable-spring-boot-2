@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>spring.znevzz</groupId>
 	<artifactId>enable-spring-boot-2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>demo_for_spring2</name>
-	<description>Demo project for Spring Boot 2</description>
+	<description>Demo project for Spring Boot 2 with Eureka Discovery</description>
 
 	<properties>
 		<java.version>1.8</java.version>

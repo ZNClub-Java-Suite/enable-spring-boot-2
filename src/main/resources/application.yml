@@ -19,8 +19,8 @@ logging:
 
 eureka:
   client:
-    fetch-registry: true
-    register-with-eureka: true
+    fetch-registry: false
+    register-with-eureka: false
 
 default:
   hello:
@@ -33,3 +33,13 @@ management:
     web:
       exposure:
         include: '*'
+
+---
+
+spring:
+  profiles: discovery
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
