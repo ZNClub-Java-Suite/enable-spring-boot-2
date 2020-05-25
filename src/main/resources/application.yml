@@ -10,12 +10,12 @@ server:
 ## LOGGING
 logging:
   level:
-#    root: INFO
+#    root: ERROR
     org:
       springframework:
-        web: TRACE
+        web: ERROR
         boot:
-          actuate: TRACE
+          actuate: ERROR
 
 eureka:
   client:

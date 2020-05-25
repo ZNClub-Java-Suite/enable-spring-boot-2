@@ -14,3 +14,9 @@ Demo and Playground to explore Spring Boot 2 latest features
 - Logging Pattern
 - Metrics
 - Health
+
+## Checklist
+- logging levels
+- eureka client
+- auto-configure H2
+- git-plugin-for-actuator
