@@ -20,3 +20,30 @@ Demo and Playground to explore Spring Boot 2 latest features
 - eureka client
 - auto-configure H2
 - git-plugin-for-actuator
+- upgrade to latest Boot and Cloud versions
+
+## Docker
+
+- build
+```bash
+docker build /home/znevzz/Desktop/Projects/Spring/enable-spring-boot-2/ -t enable-spring-boot-2
+```
+- view
+```bash
+docker image ls
+docker container ls
+```
+- run
+```bash
+docker run <IMAGE-ID>/<REPOSITORY> -p <INTERNAL-PORT:EXTERNAL-PORT>
+docker run -p 8999:8999 enable-spring-boot-2
+```
+- delete
+```bash
+docker image rm <IMAGE-ID>
+docker image rm <IMAGE-ID> -f
+```
+- enter container
+```bash
+docker exec -it <IMAGE-ID> bash
+```
