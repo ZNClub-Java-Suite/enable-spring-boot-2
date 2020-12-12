@@ -1,7 +1,7 @@
 # enable-spring-boot-2
 Demo and Playground to explore Spring Boot 2 latest features
 
-# Topics
+## Topics
 1. Display all auto configuration classes
 - IntelliJ IDEA option
 - log
@@ -15,14 +15,56 @@ Demo and Playground to explore Spring Boot 2 latest features
 - Metrics
 - Health
 
-## Checklist
-- logging levels
-- eureka client
-- auto-configure H2
-- git-plugin-for-actuator
-- upgrade to latest Boot and Cloud versions
+---
+## Index
 
-## Docker
+- Getting Started
+- Checklist
+- Extras
+
+---
+## Getting Started
+
+1. Spring Boot App
+```java
+DemoForSpring2Application.java
+```
+2. Spring Boot Test
+```java
+DemoForSpring2ApplicationTests.java
+```
+3. Maven Docker build
+```bash
+mvn spring-boot:build-image -Dspring-boot.build-image.imageName=enable-spring-boot-2 -f pom.xml
+# Failing: [INFO] I/O exception (java.io.IOException) caught when processing request to {}->docker://localhost:2376: com.sun.jna.LastErrorException: [13] Permission denied
+# Apparently due to running docker command as non-root user
+# https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+
+```
+
+---
+## Checklist
+
+### Spring
+- upgrade to latest Boot and Cloud versions:
+- eureka client: pom.xml, application.yaml, @EnableEurekaClient
+- *auto-configure H2*
+
+### Java
+- logging levels: application.yaml
+- git-plugin-for-actuator: pom.xml -> build.plugins
+- Docker image: Dockerfile
+- *Lombok*
+
+
+## Extras
+
+### Docker
+
+- status of docker daemon
+```bash
+systemctl status docker
+```
 
 - build
 ```bash
@@ -47,3 +89,4 @@ docker image rm <IMAGE-ID> -f
 ```bash
 docker exec -it <IMAGE-ID> bash
 ```
+
